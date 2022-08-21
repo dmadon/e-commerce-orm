@@ -7,7 +7,7 @@ const { triggerAsyncId } = require('async_hooks');
 
 // Products belongsTo Category
 Product.belongsTo(Category,{
-  foreignKey:'user_id'
+  foreignKey:'category_id'
 });
 
 // Categories have many Products
