@@ -46,7 +46,13 @@ router.get('/:id', (req, res) => {
       },
     ]
   })
-  .then(dbProductData => {res.json(dbProductData)})
+  .then(dbProductData => {
+    if(!dbProductData){
+      res.status(400).json({message: "No product found with that id."});
+      return;
+    }
+    res.json(dbProductData)
+  })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -77,7 +83,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// update product
+// update one product by id
 router.put('/:id', (req, res) => {
   // update product data
   Product.update(req.body, {
@@ -124,8 +130,25 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete one product by id
 router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+    Product.destroy({
+      where:{
+        id: req.params.id
+      }
+    })
+    .then(dbProductData => {
+      if(!dbProductData){
+        res.status(400).json({message:'No product was found with that id.'});
+        return;
+      }
+      res.json(dbProductData)
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
+
 });
 
 module.exports = router;
