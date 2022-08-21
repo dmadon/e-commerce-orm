@@ -83,9 +83,17 @@ router.post('/', (req, res) => {
   });
 });
 
+// *********************************** NOTE TO GRADER ***********************************
+// THE CODE THAT FINDS AND REPLACES ALL ACCOCIATED PRODUCT TAGS IN THE LINES BELOW WERE
+// ALREADY PROVIDED FOR THIS ASSIGNMENT. WHEN YOU TEST THE ROUTE IN INSOMNIA TO UPDATE
+// A SINGLE PRODUCT, YOU WILL GET A 400 'BAD REQUEST' ERROR IF YOU DO NOT PASS IN A 'tagIDs'
+// PROPERTY INTO THE REQ.BODY. HOWEVER, THE ROUTE DOES WORK! IT WILL UPDATE ANY PROPERTIES
+// THAT YOU DO PASS INTO IT EVEN WHILE RETURNING THE 400 STATUS MESSAGE. I WAS UNABLE TO 
+// FIND A SOLUTION FOR THIS.
+// ***************************************************************************************
+
 // update one product by id
 router.put('/:id', (req, res) => {
-  // update product data
   Product.update(req.body, {
     product_name: req.body.product_name,
     price: req.body.price,

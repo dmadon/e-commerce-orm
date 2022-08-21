@@ -3,11 +3,12 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
-const { triggerAsyncId } = require('async_hooks');
+
 
 // Products belongsTo Category
 Product.belongsTo(Category,{
-  foreignKey:'category_id'
+  foreignKey:'category_id',
+  onDelete: 'SET NULL'
 });
 
 // Categories have many Products
