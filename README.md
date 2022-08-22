@@ -26,7 +26,7 @@
   * If you have questions about this project, you can email me at deanna.madon@gmail.com
 
   ## Links
-  View a walkthrough video of the eCommerce ORM Challenge in action:
+  View a walkthrough video of the eCommerce ORM Challenge in action: https://drive.google.com/file/d/1yYkI_VdclEDYlbyxcYgnenuizeWdqjlM/view?usp=sharing
 
   View the GitHub repository: https://github.com/dmadon/e-commerce-orm
 
