@@ -31,4 +31,7 @@
   View the GitHub repository: https://github.com/dmadon/e-commerce-orm
 
   ## Preview
+  
+  ![image](https://user-images.githubusercontent.com/99852346/185823917-1db61a35-e521-40f2-abd8-a57f83c87e81.png)
+
 
